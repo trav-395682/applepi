@@ -1,6 +1,5 @@
-Pihole docker container to use without a raspberry pi.
-
-Best practice is to setup on a separate VM dedicated to pihole
+Pihole setup to use without a raspberry pi, on a dedicated VM.
+// https://docs.pi-hole.net/main/
 
 **Setup:** 
 VM with Ubuntu Server/ pihole/ tailscale for remote access to server
