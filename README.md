@@ -19,13 +19,16 @@ After making these changes, you should restart systemd-resolved using:
 
 Using pihole with local DNS for Nginx with wildcard**
 
-Pihole > Settings > Advanced > Miscellaneous 
-    misc.dnsmasq_lines
-    Values:
-        address=/*.<insertdomain.eg>/<NginxIP>
+Pihole > Settings > Advanced > Miscellaneous > misc.dnsmasq_lines
+    Values=
+    
+    address=/*.<insertdomain.eg>/<NginxIP>
 
 Nginx > Create proxy
-    Domain:
+Domain:
+    
         app.<insertdomain.eg>
-    IP:
-        <applicationIP:Port>
+    
+With IP:
+
+    '<applicationIP:Port>'
