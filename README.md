@@ -1,10 +1,10 @@
 Pihole setup to use without a raspberry pi, on a dedicated VM.
 // https://docs.pi-hole.net/main/
 
-**Setup:** 
+Setup:
 VM with Ubuntu Server/ pihole/ tailscale for remote access to server
 
-**Disable systemd-resolved port 53**
+Disable systemd-resolved port 53**
 Modern releases of Ubuntu (17.10+) and Fedora (33+) include systemd-resolved which is configured by default to implement a caching DNS stub resolver. This will prevent pi-hole from listening on port 53. The stub resolver should be disabled with:
 
     sudo sh -c 'mkdir -p /etc/systemd/resolved.conf.d && printf "[Resolve]\nDNSStubListener=no\n" | tee /etc/systemd/resolved.conf.d/no-stub.conf'
@@ -17,7 +17,7 @@ After making these changes, you should restart systemd-resolved using:
 
     systemctl restart systemd-resolved
 
-**Using pihole with local DNS for Nginx with wildcard**
+Using pihole with local DNS for Nginx with wildcard**
 
 Pihole > Settings > Advanced > Miscellaneous 
     misc.dnsmasq_lines
